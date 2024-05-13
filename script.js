@@ -53,21 +53,36 @@ function CreateNode(a, path)
     e.appendChild(eb);
     e.appendChild(ec);
 
-    NodeSet(e, false);
-
-    ea.addEventListener("click", function (event) {
-        event.stopPropagation();
-
-        var a;
-        a = this.parentElement;
-
-        ToggleNode(a);
-    });
-
     var array;
     array = a.Child;
     var count;
     count = array.length;
+
+    var b;
+    b = (count == 0);
+    if (b)
+    {
+        e.classList.add("Leaf");
+
+        var ooa;
+        ooa = '\ue57b';
+        ea.setAttribute('data-before', ooa);
+    }
+    if (!b)
+    {
+        NodeSet(e, false);
+
+        ea.addEventListener("click", function (event) {
+            event.stopPropagation();
+
+            var a;
+            a = this.parentElement;
+
+            ToggleNode(a);
+        });
+    }
+
+
     var i;
     i = 0;
     while (i < count)

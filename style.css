@@ -69,15 +69,22 @@ body
     width: 18px;
     height: 20px;
     line-height: 16px;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .NodeIcon:before
 {
     font-family: "Material Icons Outlined";
     content: attr(data-before);
+}
+
+.Node.Leaf > .NodeIcon
+{
+    left: 7px;
+    font-size: 7px;
+    cursor: default;
 }
 
 .NodeName
