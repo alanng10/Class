@@ -13,15 +13,43 @@ body
     font-weight: 400;
     font-style: normal;
     --MainColor: #008888;
+    --HeaderHeight: 95px;
     --NaviPadding: 10px;
+    --NaviWidth: 350px;
     --ArticlePadding: 36px;
+}
+
+.Header
+{
+    position: absolute;
+    width: 100%;
+    height: var(--HeaderHeight);
+    border-bottom : 2px solid var(--MainColor);
+}
+
+.Header .Name
+{
+    position: absolute;
+    left: 40px;
+    top: 11px;
+    width: 400px;
+    height: 60px;
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.Header .Name > a
+{
+    text-decoration: none;
+    color: var(--MainColor);
 }
 
 .Navi
 {
     position: absolute;
-    width: 350px;
-    height: calc(100% - var(--NaviPadding) * 2);
+    top: calc(var(--HeaderHeight) + 2px);
+    width: var(--NaviWidth);
+    height: calc(100% - (var(--HeaderHeight) + 2px) - var(--NaviPadding) * 2);
     padding: var(--NaviPadding);
     border-right: 2px solid var(--MainColor);
 }
@@ -29,9 +57,10 @@ body
 .Article
 {
     position: absolute;
-    left: calc(350px + var(--NaviPadding) * 2 + 2px);
-    width: calc(100% - (350px + var(--NaviPadding) * 2 + 2px) - var(--ArticlePadding) * 2);
-    height: calc(100% - var(--ArticlePadding) * 2);
+    top: calc(var(--HeaderHeight) + 2px);
+    left: calc(var(--NaviWidth) + var(--NaviPadding) * 2 + 2px);
+    width: calc(100% - (var(--NaviWidth) + var(--NaviPadding) * 2 + 2px) - var(--ArticlePadding) * 2);
+    height: calc(100% - (var(--HeaderHeight) + 2px) - var(--ArticlePadding) * 2);
     padding: var(--ArticlePadding);
 }
 

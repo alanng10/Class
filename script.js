@@ -1,12 +1,26 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    InitHeader();
+
     CreateNavi();
 });
+
+function InitHeader()
+{
+    var a;
+    a = document.querySelector(".Main .Header > .Name > a");
+
+    var link;
+    link = PageRootPath + "/";
+    link = AppendLinkFileName(link);
+
+    a.href = link;
+}
 
 function CreateNavi()
 {
     var navi;
-    navi = document.querySelector(".Navi");
+    navi = document.querySelector(".Main .Navi");
 
     var e;
     e = CreateNode(NaviTree, "");
@@ -33,10 +47,8 @@ function CreateNode(a, path)
     var link;
     link = PageRootPath + "/" + path;
 
-    if (LinkFileName)
-    {
-        link = link + "index.html";
-    }
+    link = AppendLinkFileName(link);
+
 
     var eba;
     eba = document.createElement("a");
@@ -82,7 +94,6 @@ function CreateNode(a, path)
         });
     }
 
-
     var i;
     i = 0;
     while (i < count)
@@ -99,6 +110,15 @@ function CreateNode(a, path)
     }
 
     return e;
+}
+
+function AppendLinkFileName(link)
+{
+    if (LinkFileName)
+    {
+        link = link + "index.html";
+    }
+    return link
 }
 
 function CreateElement()
