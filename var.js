@@ -1,2 +1,0 @@
-var LinkFileName;
-LinkFileName = false;
