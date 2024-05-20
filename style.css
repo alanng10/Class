@@ -13,10 +13,14 @@ body
     font-weight: 400;
     font-style: normal;
     --MainColor: #008888;
+    --ClassNameColor: #008888;
     --HeaderHeight: 95px;
+    --HeaderBorder: 2px;
     --NaviPadding: 10px;
     --NaviWidth: 350px;
+    --NaviBorder: 2px;
     --ArticlePadding: 36px;
+    --ReferencePadding: 36px;
 }
 
 .Header
@@ -24,7 +28,7 @@ body
     position: absolute;
     width: 100%;
     height: var(--HeaderHeight);
-    border-bottom : 2px solid var(--MainColor);
+    border-bottom : var(--HeaderBorder) solid var(--MainColor);
 }
 
 .Header .Name
@@ -47,24 +51,24 @@ body
 .Navi
 {
     position: absolute;
-    top: calc(var(--HeaderHeight) + 2px);
+    top: calc(var(--HeaderHeight) + var(--HeaderBorder));
     width: var(--NaviWidth);
-    height: calc(100% - (var(--HeaderHeight) + 2px) - var(--NaviPadding) * 2);
+    height: calc(100% - (var(--HeaderHeight) + var(--HeaderBorder)) - var(--NaviPadding) * 2);
     padding: var(--NaviPadding);
-    border-right: 2px solid var(--MainColor);
+    border-right: var(--NaviBorder) solid var(--MainColor);
 }
 
 .Article
 {
     position: absolute;
-    top: calc(var(--HeaderHeight) + 2px);
-    left: calc(var(--NaviWidth) + var(--NaviPadding) * 2 + 2px);
-    width: calc(100% - (var(--NaviWidth) + var(--NaviPadding) * 2 + 2px) - var(--ArticlePadding) * 2);
-    height: calc(100% - (var(--HeaderHeight) + 2px) - var(--ArticlePadding) * 2);
+    top: calc(var(--HeaderHeight) + var(--HeaderBorder));
+    left: calc(var(--NaviWidth) + var(--NaviPadding) * 2 + var(--NaviBorder));
+    width: calc(100% - (var(--NaviWidth) + var(--NaviPadding) * 2 + var(--NaviBorder)) - var(--ArticlePadding) * 2);
+    height: calc(100% - (var(--HeaderHeight) + var(--HeaderBorder)) - var(--ArticlePadding) * 2);
     padding: var(--ArticlePadding);
 }
 
-.Article .Title
+.Article > .Title
 {
     height: 50px;
     margin-top: 10px;
@@ -73,25 +77,131 @@ body
     font-weight: 700;
 }
 
-.Article .Inner
+.Article > .Inner
 {
     font-size: 18px;
 }
 
-.Node
+.ClassName
+{
+    display: inline;
+    vertical-align: baseline;
+}
+
+.ClassName > a
+{
+    text-decoration: none;
+    color: var(--ClassNameColor);
+}
+
+.Reference
+{
+    position: absolute;
+    top: calc(var(--HeaderHeight) + var(--HeaderBorder));
+    left: calc(var(--NaviWidth) + var(--NaviPadding) * 2 + var(--NaviBorder));
+    width: calc(100% - (var(--NaviWidth) + var(--NaviPadding) * 2 + var(--NaviBorder)) - var(--ReferencePadding) * 2);
+    height: calc(100% - (var(--HeaderHeight) + var(--HeaderBorder)) - var(--ReferencePadding) * 2);
+    padding: var(--ReferencePadding);
+}
+
+.Reference > .Title
+{
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Reference > .Class > .Name
+{
+    display: inline;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 30px;
+    vertical-align: baseline;
+    color: #004080;
+}
+
+.Reference > .Class > .Name > .Icon
+{
+    display: inline;
+    font-size: 44px;
+}
+
+.Reference > .Class > .Name > .Icon:before
+{
+    font-family: "Material Icons Outlined";
+    content: '\e90c';
+    position: relative;
+    top: 10px;
+}
+
+.Reference > .Class > .Section
+{
+    margin-top: 14px;
+}
+
+.Reference > .Class > .Section > .Title
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Reference > .Class > .Module > .Text
+{
+    font-size: 20px;
+}
+
+.Reference > .Class > .Module > .Text > .Name
+{
+    display: inline;
+}
+
+.Reference > .Class > .Module > .Text > .Version
+{
+    display: inline;
+}
+
+.Reference > .Class > .Module > .Text a
+{
+    color: #004080;
+    text-decoration: none;
+}
+
+.Reference > .Class > .Base > .Text
+{
+    font-size: 20px;
+}
+
+.Reference > .Class > .Base > .Text > a
+{
+    text-decoration: none;
+    color: var(--MainColor);
+}
+
+.Reference > .Class > .Define > .Text
+{
+    font-size: 16px;
+}
+
+.Reference > .Class > .Detail > .Inner
+{
+    font-size: 16px;
+}
+
+.Navi .Node
 {
     width: auto;
     height: auto;
     position: relative;
 }
 
-.NodeChild
+.Navi .Node > .Child
 {
     margin-left: 18px;
     display: none;
 }
 
-.NodeIcon
+.Navi .Node > .Icon
 {
     position: absolute;
     top: 2px;
@@ -103,20 +213,20 @@ body
     font-size: 22px;
 }
 
-.NodeIcon:before
+.Navi .Node > .Icon:before
 {
     font-family: "Material Icons Outlined";
     content: attr(data-before);
 }
 
-.Node.Leaf > .NodeIcon
+.Navi .Node.Leaf > .Icon
 {
     left: 7px;
     font-size: 7px;
     cursor: default;
 }
 
-.NodeName
+.Navi .Node > .Name
 {
     height: 24px;
     margin-left: 20px;
@@ -126,22 +236,28 @@ body
     font-weight: 500;
 }
 
-.NodeName > a
+.Navi .Node > .Name > a
 {
+    color: black;
     text-decoration: none;
 }
 
-.Navi > .Node > .NodeIcon
+.Navi .Node.Current > .Name
+{
+    font-weight: bold;
+}
+
+.Navi > .Node > .Icon
 {
     display: none;
 }
 
-.Navi > .Node > .NodeName
+.Navi > .Node > .Name
 {
     display: none;
 }
 
-.Navi > .Node > .NodeChild
+.Navi > .Node > .Child
 {
     margin-left: 0;
 }
