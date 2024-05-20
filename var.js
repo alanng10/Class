@@ -1,0 +1,2 @@
+var LinkFileName;
+LinkFileName = false;

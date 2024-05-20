@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Doc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+<link href="./../../style.css?v=0003a12a64c41ce" rel="stylesheet" />
+<script>
+    var PageRootPath;
+    PageRootPath = "./../..";
+    var PagePath;
+    PagePath = "./Article/Compile";
+</script>
+<script src="./../../var.js?v=0003a12a64c41ce"></script>
+<script src="./../../articlevar.js?v=0003a12a64c41ce"></script>
+<script src="./../../script.js?v=0003a12a64c41ce"></script>
+</head>
+<body>
+<div class="Main">
+    <div class="Header">
+        <div class="Name"><a>CLASS</a></div>
+    </div>
+    <div class="Navi NaviArticle">
+    </div>
+    <div class="Article">
+        <div class="Title">Compile</div>
+        <div class="Inner">
+        
+Class source code is compiled to module.
+The module binary is C# assembly binary.
+The module binary is executed on .NET runtime.
+The execution is started with execution of one of the module binary associated executable ".exe" files.<br /><br />
+Class source code is compiled to C# source code and a refer binary, then the C# source code is compiled to C# assembly binary with .NET CLI.
+The refer binary contains info of exported declarations of the module.
+During compilation, class compiler reads the refer binaries of the modules that the currently compiled module imports. Class compiler uses the declaration info in the refer
+binaries to do class checkings, and name checkings.
+        </div>
+    </div>
+</div>
+</body>
+</html>
