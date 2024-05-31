@@ -56,6 +56,20 @@ NaviTree =
                     "Name": "System",
                     "Child":
                     {
+                        "Effect":
+                        {
+                            "Name": "Effect",
+                            "Child":
+                            {
+                                "Video":
+                                {
+                                    "Name": "Video",
+                                    "Child":
+                                    {
+                                    }
+                                },
+                            }
+                        },
                         "Modules":
                         {
                             "Name": "Modules",
