@@ -56,6 +56,13 @@ NaviTree =
                     "Name": "System",
                     "Child":
                     {
+                        "Derive":
+                        {
+                            "Name": "Derive",
+                            "Child":
+                            {
+                            }
+                        },
                         "Effect":
                         {
                             "Name": "Effect",
@@ -73,6 +80,13 @@ NaviTree =
                         "Modules":
                         {
                             "Name": "Modules",
+                            "Child":
+                            {
+                            }
+                        },
+                        "Tick":
+                        {
+                            "Name": "Tick",
                             "Child":
                             {
                             }
