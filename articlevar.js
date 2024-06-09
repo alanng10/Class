@@ -68,6 +68,13 @@ NaviTree =
                             "Name": "Effect",
                             "Child":
                             {
+                                "Type":
+                                {
+                                    "Name": "Type",
+                                    "Child":
+                                    {
+                                    }
+                                },
                                 "Video":
                                 {
                                     "Name": "Video",
@@ -77,9 +84,9 @@ NaviTree =
                                 },
                             }
                         },
-                        "Modules":
+                        "Module":
                         {
-                            "Name": "Modules",
+                            "Name": "Module",
                             "Child":
                             {
                             }
