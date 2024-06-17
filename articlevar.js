@@ -9,6 +9,13 @@ NaviTree =
             "Name": "Article",
             "Child":
             {
+                "Abstract":
+                {
+                    "Name": "Abstract",
+                    "Child":
+                    {
+                    }
+                },
                 "Any":
                 {
                     "Name": "Any",
