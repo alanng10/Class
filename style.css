@@ -66,6 +66,7 @@ body
     width: calc(100% - (var(--NaviWidth) + var(--NaviPadding) * 2 + var(--NaviBorder)) - var(--ArticlePadding) * 2);
     height: calc(100% - (var(--HeaderHeight) + var(--HeaderBorder)) - var(--ArticlePadding) * 2);
     padding: var(--ArticlePadding);
+    overflow: auto;
 }
 
 .Article > .Title
