@@ -58,13 +58,6 @@ NaviTree =
                     {
                     }
                 },
-                "Name":
-                {
-                    "Name": "Name",
-                    "Child":
-                    {
-                    }
-                },
                 "Node":
                 {
                     "Name": "Node",
