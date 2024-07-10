@@ -5,16 +5,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-<link href="./../../style.css?v=0003a13ae2dd1e7" rel="stylesheet" />
+<link href="./../../style.css?v=0003a13ae819f84" rel="stylesheet" />
 <script>
     var PageRootPath;
     PageRootPath = "./../..";
     var PagePath;
     PagePath = "./Article/Module";
 </script>
-<script src="./../../var.js?v=0003a13ae2dd1e7"></script>
-<script src="./../../articlevar.js?v=0003a13ae2dd1e7"></script>
-<script src="./../../script.js?v=0003a13ae2dd1e7"></script>
+<script src="./../../var.js?v=0003a13ae819f84"></script>
+<script src="./../../articlevar.js?v=0003a13ae819f84"></script>
+<script src="./../../script.js?v=0003a13ae819f84"></script>
 </head>
 <body>
 <div class="Main">
@@ -47,14 +47,9 @@ additional 2 executable files and executable related files are parts of the modu
 The module execution is started with the execution of 1 of the executable files.
 1 executable file is for execution with console input and output in a command prompt.
 Another executable file is for execution without console input and output and without command prompt.
-The executable files can be executed in any working directory.
-The directory is ExecuteFoldPath that can be gotten in System.Storage module Arrange class.
-The working directory during module execution is the directory that contain the C# assembly binary of the module.<br /><br />
-Modules read and write files in their data directories with paths that include their module ref strings.
-Modules can get their module ref strings by calling ModuleInfo class Name maide and Version maide in System.Infra module.
-Modules do not need to hard code module ref strings, that include module versions, in their classes.
-If modules need to read or write files in other modules data directories, including modules that they import, 
-they need to use paths that include module ref strings of those other modules.
+The executable files can be executed in any working directory.<br /><br />
+Modules read and write files in their data directories with paths that relative to their data directories.
+Modules files in their data directories are not open to other modules by builtin infra.
         </div>
     </div>
 </div>
