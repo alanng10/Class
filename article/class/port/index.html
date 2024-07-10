@@ -10,7 +10,7 @@
     var PageRootPath;
     PageRootPath = "./../../..";
     var PagePath;
-    PagePath = "./Article/System/Tick";
+    PagePath = "./Article/Class/Port";
 </script>
 <script src="./../../../var.js?v=0003a13ae2dd1e7"></script>
 <script src="./../../../articlevar.js?v=0003a13ae2dd1e7"></script>
@@ -24,13 +24,14 @@
     <div class="Navi NaviArticle">
     </div>
     <div class="Article">
-        <div class="Title">System Tick</div>
+        <div class="Title">Class Port</div>
         <div class="Inner">
         
-Current time is in a time era.
-In this time era, 1 day duration is same in the whole era.<br /><br />
-The smallest duration in this time era is 1/2^60 of 1 day duration.<br /><br />
-Tick is 1 giga times the smallest duration.
+Class source port has storage section that interprets storage source paths and destination paths.<br /><br />
+The paths are interpreted in the way that all parts of the paths are storage entries that have data.<br /><br />
+The source paths storage nodes are copied to be the destination paths storage nodes.<br /><br />
+The source paths storage nodes any data and any child nodes are copied. 
+File path has no child node. Fold path has no data.
         </div>
     </div>
 </div>

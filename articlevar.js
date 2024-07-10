@@ -30,6 +30,20 @@ NaviTree =
                     {
                     }
                 },
+                "Class":
+                {
+                    "Name": "Class",
+                    "Child":
+                    {
+                        "Port":
+                        {
+                            "Name": "Port",
+                            "Child":
+                            {
+                            }
+                        },
+                    }
+                },
                 "Compile":
                 {
                     "Name": "Compile",
