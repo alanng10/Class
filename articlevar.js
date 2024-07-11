@@ -128,6 +128,13 @@ NaviTree =
                         },
                     }
                 },
+                "Text":
+                {
+                    "Name": "Text",
+                    "Child":
+                    {
+                    }
+                },
                 "Word":
                 {
                     "Name": "Word",
