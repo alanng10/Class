@@ -96,6 +96,13 @@ NaviTree =
                             "Name": "Effect",
                             "Child":
                             {
+                                "Audio":
+                                {
+                                    "Name": "Audio",
+                                    "Child":
+                                    {
+                                    }
+                                },
                                 "Type":
                                 {
                                     "Name": "Type",
