@@ -103,6 +103,20 @@ NaviTree =
                                     {
                                     }
                                 },
+                                "Network":
+                                {
+                                    "Name": "Network",
+                                    "Child":
+                                    {
+                                    }
+                                },
+                                "Storage":
+                                {
+                                    "Name": "Storage",
+                                    "Child":
+                                    {
+                                    }
+                                },
                                 "Type":
                                 {
                                     "Name": "Type",
@@ -117,6 +131,13 @@ NaviTree =
                                     {
                                     }
                                 },
+                            }
+                        },
+                        "Memory":
+                        {
+                            "Name": "Memory",
+                            "Child":
+                            {
                             }
                         },
                         "Module":
