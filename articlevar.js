@@ -58,6 +58,13 @@ NaviTree =
                     {
                     }
                 },
+                "English":
+                {
+                    "Name": "English",
+                    "Child":
+                    {
+                    }
+                },
                 "Int":
                 {
                     "Name": "Int",
@@ -159,6 +166,13 @@ NaviTree =
                 "Text":
                 {
                     "Name": "Text",
+                    "Child":
+                    {
+                    }
+                },
+                "Thread":
+                {
+                    "Name": "Thread",
                     "Child":
                     {
                     }
