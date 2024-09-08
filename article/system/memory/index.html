@@ -5,16 +5,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-<link href="./../../../style.css?v=0003a14440e031a" rel="stylesheet" />
+<link href="./../../../style.css?v=0003a14e2f92764" rel="stylesheet" />
 <script>
     var PageRootPath;
     PageRootPath = "./../../..";
     var PagePath;
     PagePath = "./Article/System/Memory";
 </script>
-<script src="./../../../var.js?v=0003a14440e031a"></script>
-<script src="./../../../articlevar.js?v=0003a14440e031a"></script>
-<script src="./../../../script.js?v=0003a14440e031a"></script>
+<script src="./../../../var.js?v=0003a14e2f92764"></script>
+<script src="./../../../articlevar.js?v=0003a14e2f92764"></script>
+<script src="./../../../script.js?v=0003a14e2f92764"></script>
 </head>
 <body>
 <div class="Main">
@@ -38,8 +38,8 @@ A entry has 2 Ints.
 The first Int is a 64 bit Int that is block memory addresss.
 The second Int is a 64 bit Int that is allocation bits of the block of the first Int.<br /><br />
 Memory space mapping starts from the root entry.<br /><br />
-Memory address that is mapped, has its first 4 12 bits indexed into 4 tiers of block tables.
-The last 16 bits is byte index of a block.
+Memory address that is mapped, the lowest 16 bits is byte index of a block.
+The next higher 36 bits are 3 12 bits indexed into 3 tiers of block tables.
         </div>
     </div>
 </div>

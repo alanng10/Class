@@ -5,16 +5,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-<link href="./../../style.css?v=0003a14440e031a" rel="stylesheet" />
+<link href="./../../style.css?v=0003a14e2f92764" rel="stylesheet" />
 <script>
     var PageRootPath;
     PageRootPath = "./../..";
     var PagePath;
     PagePath = "./Article/Avalon";
 </script>
-<script src="./../../var.js?v=0003a14440e031a"></script>
-<script src="./../../articlevar.js?v=0003a14440e031a"></script>
-<script src="./../../script.js?v=0003a14440e031a"></script>
+<script src="./../../var.js?v=0003a14e2f92764"></script>
+<script src="./../../articlevar.js?v=0003a14e2f92764"></script>
+<script src="./../../script.js?v=0003a14e2f92764"></script>
 </head>
 <body>
 <div class="Main">
@@ -29,7 +29,11 @@
         
 Avalon is Class Library list for C#.
 Avalon has infra classes and effect element classes for C#.<br /><br />
+Avalon uses C# signed Int 64 bits as general Int class. Int unsigned values use only lower 60 bits. 
+Int signed values use lower 60 bits with higher 4 bits sign extend. Int null value is represented with -1 in 64 bits.<br /><br />
 Avalon classes member variables are not in abstract.<br /><br />
+Avalon Infra module String class Value and Count fields are not in abstract. Data class Value field is not in abstract.<br /><br />
+Avalon String class is not to be derived.<br /><br />
 Avalon has Thread module. It has enough threading elements for C#.
 All threads including main thread, has 1 event loop, that can be start and exit.
 One event loop can be start once and exit once.
@@ -43,7 +47,7 @@ the Thread is the thread that Post class Any is Init.
 Post class Any Execute method is call to queue event. When the event loop execute the event, it will execute a State Any in Post class Any.
 The Execute method can be call from any Thread.<br /><br />
 Avalon.Storage module Storage class has field AnyNode that is type "bool" to set the Storage Any to accept any storage nodes.<br /><br />
-Avalon uses text with each char unit in 16 bits Int.
+Avalon has text with each char unit in 32 bits Int. Avalon has String with char in 32 bits Int.
         </div>
     </div>
 </div>

@@ -72,6 +72,13 @@ NaviTree =
                     {
                     }
                 },
+                "Intern":
+                {
+                    "Name": "Intern",
+                    "Child":
+                    {
+                    }
+                },
                 "Module":
                 {
                     "Name": "Module",
@@ -173,6 +180,13 @@ NaviTree =
                 "Thread":
                 {
                     "Name": "Thread",
+                    "Child":
+                    {
+                    }
+                },
+                "Value":
+                {
+                    "Name": "Value",
                     "Child":
                     {
                     }
