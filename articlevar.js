@@ -49,25 +49,18 @@ NaviTree =
                     "Name": "Compile",
                     "Child":
                     {
-                    }
-                },
-                "Develop":
-                {
-                    "Name": "Develop",
-                    "Child":
-                    {
+                        "Module":
+                        {
+                            "Name": "Module",
+                            "Child":
+                            {
+                            }
+                        },
                     }
                 },
                 "English":
                 {
                     "Name": "English",
-                    "Child":
-                    {
-                    }
-                },
-                "Int":
-                {
-                    "Name": "Int",
                     "Child":
                     {
                     }
@@ -93,77 +86,49 @@ NaviTree =
                     {
                     }
                 },
+                "Page":
+                {
+                    "Name": "Page",
+                    "Child":
+                    {
+                    }
+                },
+                "Plat":
+                {
+                    "Name": "Plat",
+                    "Child":
+                    {
+                    }
+                },
+                "Saber":
+                {
+                    "Name": "Saber",
+                    "Child":
+                    {
+                    }
+                },
+                "Source":
+                {
+                    "Name": "Source",
+                    "Child":
+                    {
+                    }
+                },
+                "Store":
+                {
+                    "Name": "Store",
+                    "Child":
+                    {
+                    }
+                },
                 "System":
                 {
                     "Name": "System",
                     "Child":
                     {
-                        "Derive":
-                        {
-                            "Name": "Derive",
-                            "Child":
-                            {
-                            }
-                        },
-                        "Effect":
-                        {
-                            "Name": "Effect",
-                            "Child":
-                            {
-                                "Audio":
-                                {
-                                    "Name": "Audio",
-                                    "Child":
-                                    {
-                                    }
-                                },
-                                "Network":
-                                {
-                                    "Name": "Network",
-                                    "Child":
-                                    {
-                                    }
-                                },
-                                "Storage":
-                                {
-                                    "Name": "Storage",
-                                    "Child":
-                                    {
-                                    }
-                                },
-                                "Type":
-                                {
-                                    "Name": "Type",
-                                    "Child":
-                                    {
-                                    }
-                                },
-                                "Video":
-                                {
-                                    "Name": "Video",
-                                    "Child":
-                                    {
-                                    }
-                                },
-                            }
-                        },
                         "Memory":
                         {
                             "Name": "Memory",
-                            "Child":
-                            {
-                            }
-                        },
-                        "Module":
-                        {
-                            "Name": "Module",
-                            "Child":
-                            {
-                            }
-                        },
-                        "Tick":
-                        {
-                            "Name": "Tick",
                             "Child":
                             {
                             }
@@ -187,6 +152,13 @@ NaviTree =
                 "Value":
                 {
                     "Name": "Value",
+                    "Child":
+                    {
+                    }
+                },
+                "View":
+                {
+                    "Name": "View",
                     "Child":
                     {
                     }

@@ -5,16 +5,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-<link href="./../../style.css?v=0003a14e2f92764" rel="stylesheet" />
+<link href="./../../style.css?v=0003a16233c2f1c" rel="stylesheet" />
 <script>
     var PageRootPath;
     PageRootPath = "./../..";
     var PagePath;
     PagePath = "./Article/Compile";
 </script>
-<script src="./../../var.js?v=0003a14e2f92764"></script>
-<script src="./../../articlevar.js?v=0003a14e2f92764"></script>
-<script src="./../../script.js?v=0003a14e2f92764"></script>
+<script src="./../../var.js?v=0003a16233c2f1c"></script>
+<script src="./../../articlevar.js?v=0003a16233c2f1c"></script>
+<script src="./../../script.js?v=0003a16233c2f1c"></script>
 </head>
 <body>
 <div class="Main">
@@ -28,13 +28,14 @@
         <div class="Inner">
         
 Class source code is compiled to module.
-The module binary is C# assembly binary.
-The module binary is executed on .NET runtime.
+The module binary is machine code library module.
+The module binary is executed on operating system.
 The execution is started with execution of one of the module binary associated executable ".exe" files.<br /><br />
-Class source code is compiled to C# source code and a refer binary, then the C# source code is compiled to C# assembly binary with .NET CLI.
-The refer binary contains info of exported declarations of the module.
+Class source code is compiled to C source code and a refer binary, 
+then the C source code is compiled to machine code library module with GCC MinGW and QMake.
+The refer binary contains info of declarations of the module.
 During compilation, class compiler reads the refer binaries of the modules that the currently compiled module imports.
-Class compiler uses the declaration info in the refer binaries to do class checkings, and name checkings.<br /><br />
+Class compiler uses the declaration info in the refer binaries to do class checking, name checking and count checking.<br /><br />
 Class compiler has token stage, node stage and module stage.
 Token stage splits sources texts into units of tokens and comments. Units of tokens are to contribute to nodes trees result in node stage.
 Node stage creates nodes trees represent sources. The nodes trees contribute to compiled module ports and effects.
