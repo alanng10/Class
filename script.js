@@ -92,7 +92,7 @@ function NaviArticleCreate()
     navi = document.querySelector(".Main .NaviArticle");
 
     var e;
-    e = CreateNode(NaviTree, ".");
+    e = NodeCreate(NaviTree, ".");
 
     NodeSet(e, true);
 
