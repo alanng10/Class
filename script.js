@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     InitHeader();
 
-    CreateNavi();
-
-    SetNavi();
+    InitNavi();
 });
 
 function InitHeader()
@@ -13,19 +11,48 @@ function InitHeader()
     a = document.querySelector(".Main .Header > .Name > a");
 
     var link;
-    link = PageRootPath + "/";
-    link = AppendLinkFileName(link);
+    link = PageRootPath;
+    link = AddLinkFileName(link);
 
     a.href = link;
 }
 
-function SetNavi()
+function InitNavi()
+{
+    var ba;
+    ba = (typeof ArticlePath === 'undefined');
+
+    if (ba)
+    {
+        var navi;
+        navi = document.querySelector(".Main .Navi");
+
+        var e;
+        e = NodeCreateSingle("Article", "article");
+
+        var nodeIcon;
+        nodeIcon = e.firstElementChild;
+
+        nodeIcon.setAttribute('data-before', '\uef42');
+
+        navi.appendChild(e);
+    }
+
+    if (!ba)
+    {
+        NaviArticleCreate();
+
+        NaviArticleSet();
+    }
+}
+
+function NaviArticleSet()
 {
     var node;
     node = NaviTree;
 
     var h;
-    h = PagePath.substring(2);
+    h = ArticlePath.substring(2);
 
     var index;
     index = 0;
@@ -59,20 +86,20 @@ function SetNavi()
     e.classList.add("Current");
 }
 
-function CreateNavi()
+function NaviArticleCreate()
 {
     var navi;
-    navi = document.querySelector(".Main .Navi");
+    navi = document.querySelector(".Main .NaviArticle");
 
     var e;
-    e = CreateNode(NaviTree, "");
+    e = CreateNode(NaviTree, ".");
 
     NodeSet(e, true);
 
     navi.appendChild(e);
 }
 
-function CreateNode(a, path)
+function NodeCreateSingle(name, path)
 {
     var e;
     e = CreateElement();
@@ -89,13 +116,45 @@ function CreateNode(a, path)
     var link;
     link = PageRootPath + "/" + path;
 
-    link = AppendLinkFileName(link);
+    link = AddLinkFileName(link);
+
+    var eba;
+    eba = document.createElement("a");
+    eba.innerText = name;
+    eba.href = link;
+
+    eb.appendChild(eba);
+
+    e.appendChild(ea);
+    e.appendChild(eb);
+
+    return e;
+}
+
+function NodeCreate(a, path)
+{
+    var e;
+    e = CreateElement();
+    e.className = "Node";
+
+    var ea;
+    ea = CreateElement();
+    ea.className = "Icon";
+
+    var eb;
+    eb = CreateElement();
+    eb.className = "Name";
+
+    var link;
+    link = PageRootPath + "/" + "article" + "/" + path;
+
+    link = AddLinkFileName(link);
 
     var eba;
     eba = document.createElement("a");
     eba.innerText = a.Name;
     eba.href = link;
-    
+
     eb.appendChild(eba);
 
     var ec;
@@ -116,10 +175,10 @@ function CreateNode(a, path)
         aa = a.Child[index];
 
         var ka;
-        ka = path + aa.Name.toLowerCase() + "/";
+        ka = path + "/" + aa.Name.toLowerCase();
 
         var ee;
-        ee = CreateNode(aa, ka);
+        ee = NodeCreate(aa, ka);
 
         ec.appendChild(ee);
 
@@ -152,11 +211,11 @@ function CreateNode(a, path)
     return e;
 }
 
-function AppendLinkFileName(link)
+function AddLinkFileName(link)
 {
     if (LinkFileName)
     {
-        link = link + "index.html";
+        link = link + "/index.html";
     }
     return link
 }

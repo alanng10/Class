@@ -247,18 +247,3 @@ body
 {
     font-weight: bold;
 }
-
-.Navi > .Node > .Icon
-{
-    display: none;
-}
-
-.Navi > .Node > .Name
-{
-    display: none;
-}
-
-.Navi > .Node > .Child
-{
-    margin-left: 0;
-}
