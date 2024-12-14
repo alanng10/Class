@@ -247,3 +247,15 @@ body
 {
     font-weight: bold;
 }
+
+.Navi.NaviHome .Node > .Icon
+{
+    width: 22px;
+    height: 22px;
+}
+
+.Navi.NaviHome .Node > .Name
+{
+    margin-left: 24px;
+    font-weight: 600;
+}
