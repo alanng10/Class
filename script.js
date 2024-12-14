@@ -24,18 +24,8 @@ function InitNavi()
 
     if (ba)
     {
-        var navi;
-        navi = document.querySelector(".Main .Navi");
-
-        var e;
-        e = NodeCreateSingle("Article", "article");
-
-        var nodeIcon;
-        nodeIcon = e.firstElementChild;
-
-        nodeIcon.setAttribute('data-before', '\uef42');
-
-        navi.appendChild(e);
+        InitNaviAddNode("Article", "article", '\uef42');
+        InitNaviAddNode("Refer", "refer", '\ue865');
     }
 
     if (!ba)
@@ -44,6 +34,22 @@ function InitNavi()
 
         NaviArticleSet();
     }
+}
+
+function InitNaviAddNode(title, path, iconCode)
+{
+    var navi;
+    navi = document.querySelector(".Main .Navi");
+
+    var e;
+    e = NodeCreateSingle(title, path);
+
+    var nodeIcon;
+    nodeIcon = e.firstElementChild;
+
+    nodeIcon.setAttribute('data-before', iconCode);
+
+    navi.appendChild(e);
 }
 
 function NaviArticleSet()
